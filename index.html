@@ -3,7 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="style.css"/>
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
         <title>CashControl</title>
     </head>
     <body>
@@ -20,5 +24,63 @@
                 </ul>
             </nav>
         </header>
+        <main>
+            <div class="add">
+                <div id="DD">
+                    <label for="desc">DESCRIÇÃO</label>
+                        <input type="text" id="desc">
+                </div>
+                <div class="val">
+                    <label for="val">VALOR</label>
+                    <input type="number" id="valor">
+                </div>
+                <div class="type">
+                <label for="type">TIPO</label>
+                <select id="type">
+                    <option>Entrada</option>
+                    <option>Saída</option>
+                </select>
+                </div>
+                <button id="ButAdd">Adicionar</button>
+            </div>
+            <div class="info">
+                <table>
+                    <tr id="principal">
+                        <td>Descrição</td>
+                        <td>Valor</td>
+                        <td>Tipo</td>
+                    </tr>
+                    <tr>
+                        <td>Salario</td>
+                        <td>R$1800,00</td>
+                        <td><i id="Arrow-Up" class="bi bi-arrow-up-square-fill"></i></td>
+                        <td><button><i class="bi bi-x-square-fill"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>Aluguel</td>
+                        <td>R$600,00</td>
+                        <td><i id="Arrow-Down" class="bi bi-arrow-down-square-fill"></i></td>
+                        <td><button><i class="bi bi-x-square-fill"></button></i></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="Total">
+                <div class="ent">
+                    <label>Entrada</label>
+                    <label>Valor R$</label>
+                    <span>0,00</span>
+                </div>
+                <div class="Saida">
+                    <label>Saida</label>
+                    <label>Valor R$</label>
+                    <span>0,00</span>
+                </div>
+                <div class="Total">
+                    <label>Total</label>
+                    <label>Valor R$</label>
+                    <span>0,00</span>
+                </div>
+            </div>
+        </main>
     </body>
 </html>

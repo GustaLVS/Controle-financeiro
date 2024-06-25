@@ -1,41 +1,208 @@
-*{
-    margin: 0px;
-    padding: 0px;
+/* Estilização global */
+* {
+    margin: 0;
+    padding: 0;
     list-style: none;
+    box-sizing: border-box;
 }
-header{
+
+body {
+    font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+}
+
+/* Estilização do header */
+header {
     background-color: aliceblue;
-    padding: 10px 50px;
+    padding: 10px 40px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    font-family: Arial, Helvetica, sans-serif;
-    gap: 2rem;
+    justify-content: space-between;
+    gap: 1rem;
 }
-.title{
+
+.title {
     display: flex;
     flex-direction: row;
     font-size: 20pt;
     font-weight: 700;
 }
-#cash{
+
+#cash {
     color: rgb(0, 140, 255);
 }
-ul{
+
+nav ul {
     display: flex;
     flex-direction: row;
     gap: 1rem;
 }
-a{
-    display: flex;
+
+nav a {
     color: black;
     text-decoration: none;
     font-weight: 600;
 }
-a:hover{
+
+nav a:hover {
     text-decoration: underline;
 }
 
+/* Estilização da seção add */
+.add {
+    display: flex;
+    gap: 20px;
+    margin: 10px 30px 20px;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 500;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(182, 202, 247);
+}
 
+.add input, .add select, #ButAdd {
+    width: 110px;
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(201, 230, 255);
+}
 
+#ButAdd {
+    background-color: rgb(88, 177, 255);
+}
+
+#ButAdd:hover {
+    cursor: pointer;
+    background-color: rgb(33, 151, 253);
+}
+
+/* Estilização da seção info */
+.info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.info table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.info td, .info th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.info tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.info tr:hover {
+    background-color: #ddd;
+}
+
+.info th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.info button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.info button:hover {
+    color: red;
+}
+
+/* Estilização das setas */
+#Arrow-Up {
+    color: rgb(2, 184, 2);
+}
+
+#Arrow-Down {
+    color: rgb(255, 0, 0);
+}
+
+/* Estilização da seção Total */
+.Total {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 30px;
+    padding: 10px;
+    border-top: 1px solid rgb(182, 202, 247);
+    border-bottom: 1px solid rgb(182, 202, 247);
+    background-color: #f9f9f9;
+}
+
+.Total div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Total label {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.Total span {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin-top: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .add {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin: 20px;
+    }
+
+    .add input, .add select, #ButAdd {
+        width: 80%;
+    }
+
+    .info table {
+        width: 100%;
+    }
+
+    .Total {
+        flex-direction: column;
+        gap: 10px;
+        margin: 20px;
+    }
+
+    .Total div {
+        width: 100%;
+        text-align: center;
+    }
+
+    .Total label, .Total span {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    nav{
+        display: none;
+    }
+    .add {
+        margin: 10px;
+    }
+
+    .Total {
+        margin: 10px;
+        padding: 10px;
+    }
+}
