@@ -120,8 +120,7 @@ nav a:hover {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color: #4CAF50;
-    color: white;
+    color: black;
 }
 
 .info button {
@@ -132,6 +131,10 @@ nav a:hover {
 
 .info button:hover {
     color: red;
+}
+
+.info .edit:hover {
+    color: blue;
 }
 
 /* Estilização das setas */
@@ -173,6 +176,22 @@ nav a:hover {
     margin-top: 5px;
 }
 
+.Total .ent span {
+    color: green;
+}
+
+.Total .Saida span {
+    color: red;
+}
+
+.Total .Total span.positivo {
+    color: green;
+}
+
+.Total .Total span.negativo {
+    color: red;
+}
+
 /* Estilização do main */
 main {
     margin-top: 100px;
@@ -190,7 +209,6 @@ main {
     .add div {
         width: 80%;
         display: flex;
-        
         align-items: center;
         justify-content: space-between;
         margin-bottom: 10px;
